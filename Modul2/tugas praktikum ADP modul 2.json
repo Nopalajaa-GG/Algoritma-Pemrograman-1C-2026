@@ -1,0 +1,280 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 284,
+      "y": 16,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "D1; D2; D3",
+      "x": 264,
+      "y": 102,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "process",
+      "text": "pelacak=D1*D3",
+      "x": 263,
+      "y": 206,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 5,
+      "type": "decision",
+      "text": "pelacak % 2=0",
+      "x": 301,
+      "y": 335,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "pelacak1=pelacak - D2",
+      "x": 10,
+      "y": 351,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "pelacak1=pelacak + 25",
+      "x": 528,
+      "y": 362,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "decision",
+      "text": "pelacak1 % 3=0",
+      "x": 307,
+      "y": 564,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 11,
+      "type": "process",
+      "text": "nilai_akhir=pelacak1%3",
+      "x": 10,
+      "y": 611,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "nilai_akhir=pelacak1*2",
+      "x": 504,
+      "y": 612,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 14,
+      "type": "decision",
+      "text": "nilai_akhir > 50",
+      "x": 307,
+      "y": 780,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 15,
+      "type": "output",
+      "text": "\"kategori A\"",
+      "x": 25,
+      "y": 899,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 16,
+      "type": "decision",
+      "text": "nilai_akhir > 20",
+      "x": 244,
+      "y": 966,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 17,
+      "type": "output",
+      "text": "\"kategori B\"",
+      "x": 489,
+      "y": 1041,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 18,
+      "type": "output",
+      "text": "\"pasword ditolak\"",
+      "x": 356,
+      "y": 1144,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 19,
+      "type": "decision",
+      "text": "nilai_akhir%2=0",
+      "x": 246,
+      "y": 1339,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 20,
+      "type": "output",
+      "text": "\"sikllus genap\"",
+      "x": 58,
+      "y": 1498,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 21,
+      "type": "output",
+      "text": "\"siklus ganjil\"",
+      "x": 401,
+      "y": 1504,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 22,
+      "type": "end",
+      "text": "End",
+      "x": 234,
+      "y": 1640,
+      "w": 150,
+      "h": 58
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": "true"
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "branch": "false"
+    },
+    {
+      "from": 7,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "branch": "true"
+    },
+    {
+      "from": 10,
+      "to": 12,
+      "branch": "false"
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 14,
+      "branch": null
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "branch": "true"
+    },
+    {
+      "from": 14,
+      "to": 16,
+      "branch": "false"
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "branch": "true"
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "branch": "false"
+    },
+    {
+      "from": 15,
+      "to": 19,
+      "branch": null
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "branch": null
+    },
+    {
+      "from": 17,
+      "to": 19,
+      "branch": null
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "branch": "true"
+    },
+    {
+      "from": 19,
+      "to": 21,
+      "branch": "false"
+    },
+    {
+      "from": 20,
+      "to": 22,
+      "branch": null
+    },
+    {
+      "from": 21,
+      "to": 22,
+      "branch": null
+    }
+  ],
+  "nextId": 23
+}
